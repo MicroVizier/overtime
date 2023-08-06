@@ -6,7 +6,7 @@ Ideal solution for SQL enthusiasts who need to easily report time spent on a pro
 ## Features
 
 * Pure SQL code (MySQL compatible)
-* Ready to GUI integration
+* Ready for GUI integration
 * Supporting holidays (manual insertion)
 * Total working time summary for the last or actual month
 * Time category (job, holiday, other)
@@ -14,8 +14,8 @@ Ideal solution for SQL enthusiasts who need to easily report time spent on a pro
 
 ## Instalation
 
-Run whole SQL script from an arbitrary MySQL client. 
-For example bash line on Linux:
+Run whole SQL script (located in sql directory) from an arbitrary MySQL client. 
+For example, bash line on Linux:
 ```
 mysql < path/to/overtime/sql/overtime.sql
 ```
@@ -50,7 +50,7 @@ mysql < path/to/overtime/sql/overtime.sql
 ```insert into overtime.log (`type`, dt, `start`, total) values ('holiday', '2017-06-14', '08:00', '08:00');```
 
 ### A visit to a doctor.
-```insert into overtime.log (`type`, dt, `start`, `end`, note) values ('other', '2017-07-18', '13:38', '15:04', 'Návštěva lékaře');```
+```insert into overtime.log (`type`, dt, `start`, `end`, note) values ('other', '2017-07-18', '13:38', '15:04', 'Doctor visit');```
     
 ### How to insert day off (national holiday).
 ```insert ignore freeday (dt) values ('2017-07-05'),('2017-07-06'),('2017-09-28');```
